@@ -1,0 +1,267 @@
+/* Common styles */
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-wrapp {
+  width: 100%;
+  position: fixed;
+}
+
+.top-bar-wrapp {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-bar-section:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff0000;
+}
+
+.top-bar-section {
+  display: flex;
+  align-items: center;
+  color: #55616b;
+}
+
+.top-bar-section a {
+  display: flex;
+  align-items: center;
+}
+.top-bar-section a:hover {
+  color: #ff0000;
+  scale: 1.05;
+}
+.top-bar-section img {
+  margin: 5px;
+}
+.top-bar-section span {
+  margin-right: 15px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.menu-wrapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #55616b;
+}
+
+.menu-items {
+  display: flex;
+  position: relative;
+  width: 950px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  height: 45px;
+  margin-right: 10px;
+}
+
+.logo-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+}
+
+.menu-item {
+  text-align: center;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.menu-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background-color: #65717a;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-section {
+  display: flex;
+  flex-grow: 1;
+  padding: 0 40px;
+  border-right: 1px solid #55616b;
+}
+
+.dropdown-section:last-child {
+  border: none;
+}
+
+.dropdown-layout {
+  display: flex;
+}
+
+.dropdown-title {
+  padding: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #bac1c5;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown ul li {
+  margin: 5px 0 5px 0;
+}
+
+.dropdown ul li a {
+  padding: 5px !important;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+.menu-item a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.menu-item a:hover {
+  background-color: #ff0000;
+}
+
+.menu-item a.active {
+  background-color: #ff0000;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-items,
+  .top-bar {
+    display: none;
+  }
+  .menu-btn {
+    display: block !important;
+  }
+  .demo {
+    margin-top: 20px !important;
+  }
+  .logo-layout {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    transform: translateX(100%) !important;
+  }
+}
+
+/* burger menu ico */
+.menu-btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.menu-btn .bar {
+  width: 30px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn .bar:nth-of-type(2) {
+  top: calc(50% - 9px);
+}
+.menu-btn .bar:nth-of-type(3) {
+  top: calc(50% + 9px);
+}
+
+.menu-btn.active .bar:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active .bar:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active .bar:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.nav-resp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background-color: #65717a;
+  transform: translateX(100%);
+  transition: transform 0.5s;
+}
+
+.nav-resp.active {
+  transform: translateX(0);
+}
+
+.demo {
+  width: 100%;
+  height: 600px;
+  margin-top: 100px;
+  background-image: url("./bcg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.cnt {
+  width: 800px;
+  margin: 0 auto;
+}
