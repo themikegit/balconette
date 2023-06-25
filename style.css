@@ -284,6 +284,7 @@ nav {
 .nav-resp-payment {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   margin-top: auto;
 }
@@ -294,7 +295,7 @@ nav {
   justify-content: center;
   align-items: center;
   border: 1px solid #55616b;
-  padding: 15px;
+  padding: 25px;
 }
 
 .payment-logo img {
