@@ -364,8 +364,6 @@ input[type="radio"]:checked + .step {
 input[type="radio"]:checked + .step + .line {
   background-color: #55616b;
 }
-
-/* Previous and Next buttons */
 .stepper-buttons {
   display: flex;
   justify-content: end;
