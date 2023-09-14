@@ -322,6 +322,7 @@ nav {
 
 .product-wrap {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .product-wrap h1,
@@ -334,11 +335,22 @@ p {
 .product-video {
   flex: 1;
   background-color: #d5d9dc;
+  min-width: 350px;
+  min-height: 350px;
 }
 
 .product-description {
   flex: 1;
   padding: 0 10px;
+  min-width: 350px;
+}
+@media (max-width: 767px) {
+  .product-description h1 {
+    order: -1;
+  }
+  .content {
+    margin-top: 45px;
+  }
 }
 
 .star {
@@ -446,12 +458,8 @@ p {
 }
 
 .product-footer {
-  width: 400px;
+  min-width: 350px;
   text-align: center;
-}
-
-.product-footer button {
-  width: 400px;
 }
 
 .select-qyt {
@@ -472,4 +480,5 @@ p {
   color: white;
   padding: 18px;
   margin: 10px 0;
+  width: 100%;
 }
