@@ -388,53 +388,34 @@ p {
   }
 }
 
-.star-grey {
-  position: relative;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 0.7em;
-  margin-right: 0.7em;
-  margin-bottom: 1.2em;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0.7em solid rgb(140, 140, 140);
-  border-left: 0.3em solid transparent;
-
-  /* Controlls the size of the stars. */
-  font-size: var(--font-size);
-
-  &:before,
-  &:after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0.6em;
-    left: -1em;
-    border-right: 1em solid transparent;
-    border-bottom: 0.7em solid rgb(140, 140, 140);
-    border-left: 1em solid transparent;
-    transform: rotate(-35deg);
+use {
+  &:nth-child(2) {
+    transform: translate(20px);
   }
-
-  &:after {
-    transform: rotate(35deg);
+  &:nth-child(3) {
+    transform: translate(40px);
+  }
+  &:nth-child(4) {
+    transform: translate(60px);
+  }
+  &:nth-child(5) {
+    transform: translate(80px);
   }
 }
+
+.rating {
+  display: block;
+  height: 20px;
+  margin: 0.75rem auto;
+  width: 100px;
+}
+
 .rating-wrap {
   display: flex;
   align-items: top;
   margin-bottom: 10px;
 }
 
-.star-cut {
-  width: 11px;
-  overflow: hidden;
-  position: absolute;
-  right: 0px;
-  z-index: 9;
-}
 .grey {
   color: grey;
 }
