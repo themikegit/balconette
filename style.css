@@ -335,6 +335,7 @@ p {
 .product-video {
   flex: 1;
   background-color: #d5d9dc;
+  position: relative;
   min-width: 350px;
   min-height: 350px;
 }
@@ -462,4 +463,11 @@ use {
   padding: 18px;
   margin: 10px 0;
   width: 100%;
+}
+
+.warranty {
+  width: 200px;
+  position: absolute;
+  bottom: 0px;
+  left: -30px;
 }
