@@ -172,23 +172,69 @@
           </ul>
         </div>
         <div class="workarea">
-          <div class="welcome">
-            <h2>Hello Effi</h2>
-            <p>
-              Welcome to our Fixing order wizard. In order to choose the correct
-              fixings for your order we will take you through some steps that
-              will collect the data on the substrates (Structure/material being
-              fixing into) for each location a fixing is required. For each
-              location you can choose the substrate from the options we show
-              you.
-            </p>
-            <p>
-              There are X Balustrades & X Juliets we need to go through, we will
-              go through them one at a time.
-            </p>
-            <p>Lets start with [product-name]</p>
-            <a href="./step.html">
-              <button class="button-primary">START</button>
+          <div id="stepper" class="stepper"></div>
+          <div class="question">
+            <h3>
+              Are all the substrates the same for all the sections where posts
+              are fixing down?
+            </h3>
+            <label>
+              <input type="radio" name="choice" value="yes" checked /> Yes
+            </label>
+            <label> <input type="radio" name="choice" value="no" /> No </label>
+          </div>
+          <div class="">
+            <div id="selection" class="question">
+              <label for="options">Select option:</label>
+              <select id="options">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+            <table border="1" id="myTable" style="display: none">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Length</th>
+                  <th>Substrate material</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>1000</td>
+                  <td>
+                    <select id="options">
+                      <option value="" disabled selected hidden>
+                        Select an option
+                      </option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>500</td>
+                  <td>
+                    <select id="options">
+                      <option value="" disabled selected hidden>
+                        Select an option
+                      </option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="buttons">
+            <a href="step_two.html">
+              <button class="button-primary">NEXT</button>
             </a>
           </div>
         </div>
