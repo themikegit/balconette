@@ -3,6 +3,11 @@
   margin-top: 150px;
   grid-template-columns: 3fr 9fr;
 }
+.final-layout {
+  display: grid;
+
+  grid-template-columns: 6fr 6fr;
+}
 .order-list {
   background-color: #f1f4f2;
   padding: 15px;
@@ -66,10 +71,11 @@
   margin-bottom: 10px;
 }
 
-.step .line {
-  flex: 1;
+.line {
   height: 2px;
+  width: 100px;
   background-color: #ccc;
+  margin-bottom: 20px;
 }
 
 .step.active .circle {
@@ -78,6 +84,7 @@
 
 .step.completed .circle {
   background-color: #28a745;
+  color: white;
 }
 
 .step:hover .circle {
@@ -89,6 +96,7 @@
 }
 .buttons {
   text-align: center;
+  margin-top: 10px;
 }
 .button-primary {
   margin: 0 auto;
@@ -110,10 +118,6 @@ table {
 }
 td {
   padding: 10px;
-}
-
-tr {
-  border-bottom: 1px solid grey;
 }
 
 @media screen and (max-width: 768px) {

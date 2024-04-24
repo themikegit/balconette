@@ -11,10 +11,6 @@ function createStep(number, name) {
   stepName.textContent = name;
   step.appendChild(stepName);
 
-  const line = document.createElement("div");
-  line.classList.add("line");
-  step.appendChild(line);
-
   return step;
 }
 
@@ -39,13 +35,18 @@ function renderSteps(steps) {
       stepElement.classList.add("completed");
     }
     stepper.appendChild(stepElement);
-    stepElement.addEventListener("click", function () {
-      const steps = document.querySelectorAll(".step");
-      steps.forEach((step) => {
-        step.classList.remove("active");
-      });
-      stepElement.classList.add("active");
-    });
+    const line = document.createElement("div");
+    line.classList.add("line");
+    if (index != steps.length - 1) {
+      stepper.appendChild(line);
+    }
+    // stepElement.addEventListener("click", function () {
+    //   const steps = document.querySelectorAll(".step");
+    //   steps.forEach((step) => {
+    //     step.classList.remove("active");
+    //   });
+    //   stepElement.classList.add("active");
+    // });
   });
 }
 
